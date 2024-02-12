@@ -1,0 +1,17 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    background-color: #35B4EB; /* Solid background color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Takes up the entire viewport height */
+}
+
+.content {
+    text-align: center; /* Center text horizontally */
+}

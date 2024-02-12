@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.table-container {
+    display: table;
+    width: 100%;
+    border-spacing: 50px; /* Space between cells */
+    padding: 50px; /* Padding around the table */
+    background-color: rgb(212,1,240);
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    border: 1px solid black; /* 1px border for cells */
+    width: 33.33%; /* Three equal-sized columns */
+    text-align: left;
+    position: relative;
+    height: 60px;
+}
+
+.table-cell::before {
+    content: attr(data-tooltip); /* Display tooltip text */
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    right: -5px; /* Adjust as needed */
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.table-cell:hover::before {
+    opacity: 1; /* Show tooltip on hover */
+}
